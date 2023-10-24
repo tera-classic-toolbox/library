@@ -564,6 +564,13 @@ const PACKET_DATA = {
         }
     ],
 
+    "S_CHANGE_RELATION": [
+        {
+            "patch": 29,
+            "version": 1,
+        }
+    ],
+
     "S_SPAWN_USER": [
         {
             "patch": 29,

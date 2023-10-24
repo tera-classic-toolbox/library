@@ -82,6 +82,7 @@ class entity {
                     huntingZoneId: e.huntingZoneId,
                     templateId: e.templateId
                 },
+                relation: e.relation,
                 huntingZoneId: e.huntingZoneId,
                 templateId: e.templateId,
                 gameId: e.gameId,
@@ -245,6 +246,31 @@ class entity {
             if (this.collections[id]) delete this.collections[id];
         };
         dispatch.hook(...mods.packet.get_all("S_DESPAWN_COLLECTION"), DEFAULT_HOOK_SETTINGS, this.despawnCollection);
+
+        // Mob hp got updated
+        dispatch.hook(...mods.packet.get_all("S_CREATURE_CHANGE_HP"), DEFAULT_HOOK_SETTINGS, e => {
+            let id = e.target.toString();
+
+            const data = {
+                curHp: e.curHp,
+                maxHp: e.maxHp
+            };
+
+            if (this.mobs[id]) Object.assign(this.mobs[id], data);
+            if (this.players[id]) Object.assign(this.players[id], data);
+            if (this.npcs[id]) Object.assign(this.npcs[id], data);
+            if (this.unknown[id]) Object.assign(this.unknown[id], data);
+        });
+
+        // Relation got updated
+        dispatch.hook(...mods.packet.get_all("S_CHANGE_RELATION"), DEFAULT_HOOK_SETTINGS, e => {
+            let id = e.target.toString();
+
+            if (this.mobs[id]) this.mobs[id].relation = e.relation;
+            if (this.players[id]) this.players[id].relation = e.relation;
+            if (this.npcs[id]) this.npcs[id].relation = e.relation;
+            if (this.unknown[id]) this.unknown[id].relation = e.relation;
+        });
     }
 }
 
