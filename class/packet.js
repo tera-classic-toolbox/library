@@ -314,6 +314,132 @@ const PACKET_DATA = {
         }
     ],
 
+    "S_INSTANT_MOVE": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "S_INSTANT_DASH": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "S_INSTANCE_ARROW": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    /* Other skill PACKETS */
+
+    "S_GRANT_SKILL": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "S_SKILL_CATEGORY": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "S_START_COOLTIME_SKILL": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "S_DEFEND_SUCCESS": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "S_CONNECT_SKILL_ARROW": [
+        {
+            "patch": 67,
+            "version": 2
+        },
+        {
+            "patch": 74,
+            "version": 3
+        },
+    ],
+
+    "C_CANCEL_SKILL": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "C_HIT_USER_PROJECTILE": [
+        {
+            "patch": 29,
+            "version": 4
+        }
+    ],
+
+    /* PROJECTILE PACKETS */
+
+    "S_START_USER_PROJECTILE": [
+        {
+            "patch": 29,
+            "version": 9
+        },
+    ],
+
+    "S_SPAWN_PROJECTILE": [
+        {
+            "patch": 29,
+            "version": 5
+        },
+    ],
+
+    "S_END_USER_PROJECTILE": [
+        {
+            "patch": 29,
+            "version": 4
+        },
+    ],
+
+    "S_CONNECT_SKILL_ARROW": [
+        {
+            "patch": 67,
+            "version": 2
+        },
+        {
+            "patch": 74,
+            "version": 3
+        },
+    ],
+
+    /* Lockon PACKETS */
+
+    "S_CAN_LOCKON_TARGET": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
+    "C_CAN_LOCKON_TARGET": [
+        {
+            "patch": 29,
+            "version": 3
+        },
+    ],
+
     /* Misc packets PACKETS */
 
     "S_LOGIN": [
@@ -341,6 +467,13 @@ const PACKET_DATA = {
             "patch": 114,
             "version": 15
         }
+    ],
+
+    "S_CREST_MESSAGE": [
+        {
+            "patch": 29,
+            "version": 2
+        },
     ],
 
     "S_CREATURE_LIFE": [
@@ -412,6 +545,13 @@ const PACKET_DATA = {
             "patch": 67,
             "version": 3
         }
+    ],
+
+    "S_CANNOT_START_SKILL": [
+        {
+            "patch": 29,
+            "version": 4
+        },
     ],
 
     "S_SYSTEM_MESSAGE": [
@@ -760,6 +900,13 @@ const PACKET_DATA = {
         }
     ],
 
+    "S_INVEN": [
+        {
+            "patch": 29,
+            "version": 18
+        },
+    ],
+
     "S_ITEMLIST": [
         {
             "patch": 80,
@@ -814,6 +961,13 @@ const PACKET_DATA = {
         {
             "patch": 108,
             "version": 4
+        }
+    ],
+
+    "S_SKILL_LIST": [
+        {
+            "patch": 29,
+            "version": 2
         }
     ],
 

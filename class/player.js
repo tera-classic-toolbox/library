@@ -80,7 +80,7 @@ class player {
             this.attackSpeed = e.attackSpeed;
             this.attackSpeedBonus = e.attackSpeedBonus;
             const multiplier = e.attackSpeed / BASE_CLASS_SPEEDS[this.job];
-            this.aspdDivider = (this.job >= 8 ? 100 : (e.attackSpeed / multiplier));
+            this.aspdDivider = (this.job >= 10 ? 100 : (e.attackSpeed / multiplier));
             this.aspd = (e.attackSpeed + e.attackSpeedBonus) / this.aspdDivider;
             // movement speed
             this.msWalk = e.walkSpeed + e.walkSpeedBonus;
@@ -383,7 +383,7 @@ class player {
                     inventoryBuffer[0] = [];
                 }
             };
-            dispatch.hook('S_INVEN', dispatch.majorPatchVersion < 80 ? 17 : 18, DEFAULT_HOOK_SETTINGS, this.sInven);
+            dispatch.hook(...mods.packet.get_all("S_INVEN"), DEFAULT_HOOK_SETTINGS, this.sInven);
         }
 
         // Pegasus
