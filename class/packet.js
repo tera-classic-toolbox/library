@@ -232,6 +232,10 @@ const PACKET_DATA = {
 
     "C_START_INSTANCE_SKILL_EX": [
         {
+            "patch": 31,
+            "version": 5
+        },
+        {
             "patch": 67,
             "version": 4
         },
